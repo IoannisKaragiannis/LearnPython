@@ -1,0 +1,31 @@
+#################################################
+########## CHAPTER-4: PRACTICE QUESTIONS ########
+#################################################
+
+1. [] is a list
+2. spam.insert(2, 'hello')
+3. 6: '3'*2 = '33' ==> int('33')/11 = 3 ==> spam[3]=6
+4. 10
+5. [2, 4]:  spam[:2] = spam[0:2]
+6. 1: it only captures the first index of the value in search
+7. [3.14, 'cat', 11, 'cat', True, 99]
+8. [3.14, 11, 'cat', True, 99]
+9. + (concatination), * (replication)
+10. append() increase the size of the list by one and stores the new
+	element at the end of the list
+	insert() increase the size of the list by one but it stores the new
+	element in a specific location specified by the first arguments
+11. i) remove by value, e.g.: anim.remove('dog')
+	ii) remove by index, e.g.: del anim[2]
+12. i) we can loop through the strings similar to lists
+	ii) a string is a list of characters
+	iii) len(), in and not operators
+13. lists are mutable whereas tuples are immutable
+14. t = (42,)
+15. x_tuple = ('cat', 'dog', 5)
+	y_list = [1, 'elephant', 3.14]
+	
+	x_list = list(x_tuple)
+	y_tuple = tuple(y_list)
+16. The contain references to the lists
+17. copy.deepcopy() is the one we use when we want to copy list of lists
