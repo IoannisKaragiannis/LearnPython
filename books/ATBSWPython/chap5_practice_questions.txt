@@ -1,0 +1,17 @@
+#################################################
+########## CHAPTER-5: PRACTICE QUESTIONS ########
+#################################################
+
+1. empty = {}
+2. dict = {'foo': 42}
+3. Lists contain a series of values in order, whereas dicts map one item (the key)
+   to another (the value).
+4. You get a KeyError exception
+5. They are equivalent. In general if we want to check the existence of a key
+   in a dict, we can simply use the in (or not in) keyword with the dictionary
+   itself.
+6. 'cat' in spam tests if the dictionary with the name spam contains the key
+   'cat'. 'cat' in spam.values() checks if the spam dictionary has any value
+   equal to 'cat'.
+7. spam.setdefault('color', 'black')
+8. import pprint and then pprint.pprint(spam) or print(pprint.pformat(spam))
