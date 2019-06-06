@@ -26,38 +26,49 @@ def recursively(n):
 			f[i] = f[i-1] + f[i-2]
 		return f[n-1]
 
+def isNumber(num):
+	try:
+		float(num)
+		return True
+	except ValueError:
+		return False
+
 def giveMeFibonacciNumber():
-	fibonacci = input('Calculate N-th fibonacci number, where N = ')
-	
-	# check if input is positive integer
-	if not fibonacci.isdigit() or int(fibonacci) < 1:
-		print('N should be positive integer!')
-		giveMeFibonacciNumber()
-	else:
-		if int(fibonacci) > 71:
-			print('Fib[',fibonacci,'] =',closed_form(int(fibonacci)), '(closed-form): beware inaccuracies here')
+	while True:
+		n = input('Calculate N-th fibonacci number, where N = ')		
+		if isNumber(n):
+			n_float = float(n)
+			if n_float.is_integer():
+				n_int = int(n_float)
+				if n_int >= 1 and n_int < 72:
+					print('Fib[',n_int,'] =',closed_form(n_int), '(closed-form)')
+					print('Fib[',n_int,'] =',recursively(n_int), '(recursively)')
+					break
+				elif n_int >= 72:
+					print('Fib[',n_int,'] =',closed_form(n_int), '(closed-form): beware inaccuracies here')
+					print('Fib[',n_int,'] =',recursively(n_int), '(recursively)')
+					break
+				else:
+					print(str(n_int) + ' is not positive!')
+			else:
+				print(str(n_float) + ' is not an integer!')
 		else:
-			print('Fib[',fibonacci,'] =',closed_form(int(fibonacci)), '(closed-form)')
-		print('Fib[',fibonacci,'] =',recursively(int(fibonacci)), '(recursively)')		
+			print(n + ' is not a number!')
 
 def main():
-	print('***************************************')
-	print('************ [ STARTED ] **************')
-	print('***************************************')
+	bound = ''.ljust(40, '*')
+	start = ' [ STARTED ] '.center(40, '*')
+	end = ' [ FINISHED ] '.center(40, '*')
+	print(bound + '\n' + start + '\n' + bound)
 	print('Name of program:', sys.argv[0])
 	print('Number of arguments:', len(sys.argv))
 	print('Arguments:', sys.argv)
-	try:
 		
-		giveMeFibonacciNumber()
+	giveMeFibonacciNumber()
 		
-		print('***************************************')
-		print('************ [ FINISHED ] *************')
-		print('***************************************')
-		return 0
-	except:
-		print('Exception caught')
-		return 1
+	print(bound + '\n' + end + '\n' + bound)
+	return 0	
+
 	
 if __name__ == '__main__':
 	sys.exit(main())
