@@ -1,0 +1,22 @@
+-------------------------------------------------
+---------- CHAPTER-6: PRACTICE QUESTIONS --------
+-------------------------------------------------
+
+1. An escape character lets you use characters that are otherwise impossible to
+   put into a string. 
+2. \n and \t are the escape characters for new-line and tab respectively
+3. \\ represents a backslash character
+4. Since the string begins with a double quote, Python knows that the
+   single quote is part of the string and not marking the end of the string.
+5. Multiline strings don't require \n
+6. a) e
+   b) Hello
+   c) Hello
+   d) lo world!
+7. a) HELLO
+   b) True
+   c) hello
+8. a) ['Remember', 'remember', 'the', 'fifth', 'of', 'November.']
+   b) There-can-be-only-one
+9. str.rjust(2), str.rjust(3,'*'), str.ljust(3), str.ljust(6, '-'), str str.centr(4)
+10. '  test '.lstrip(), '  test '.rstrip() respectively
