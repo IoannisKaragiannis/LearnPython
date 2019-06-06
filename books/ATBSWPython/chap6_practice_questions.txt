@@ -8,7 +8,11 @@
 3. \\ represents a backslash character
 4. Since the string begins with a double quote, Python knows that the
    single quote is part of the string and not marking the end of the string.
-5. Multiline strings don't require \n
+5. Multiline strings don't require \n.
+   E.g.:
+        tmp = '''name
+		         email'''
+		print(tmp)
 6. a) e
    b) Hello
    c) Hello
