@@ -1,4 +1,5 @@
 #!/usr/bin/python
+# {}.py - A program that computes the N-th Fibonacci number
 
 import sys
 import math

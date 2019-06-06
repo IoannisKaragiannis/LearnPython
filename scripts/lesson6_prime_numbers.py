@@ -1,4 +1,6 @@
 #!/usr/bin/python
+# {}.py - A program to either calculate prime numbers within
+# a range, or infer about primarity of a specific number
 
 import sys
 import math
